@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Hot Topics</title>
+  <link rel="icon" href="/img/group-discussion-1534056-1300137.webp">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="/css/styles.min.css"> -->
+  <style>
+    * {
+      font-family: 'Abel', sans-serif !important;
+    }
+
+    body {
+      overflow: hidden;
+    }
+
+    #center {
+      color: white;
+      background-color: slateblue;
+      max-width: 450px;
+      height: 80vh;
+      margin: 10vh auto;
+      border: 3px solid white;
+      box-shadow: 10px 10px 8px 10px #888888;
+      border-radius: 5px;
+      padding: 10px;
+    }
+
+    a {
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="center" class="container centered-form">
+    <a href="/">Back</a>
+    <div class="centered-form__box">
+      <h1 style="text-align: center;" class="mt-4 mb-4">Choose Hot Discussion Topics</h1>
+      <form action="/chat.html">
+        <div class="mb-3">
+          <label class="form-label" for="display-name">Display name</label>
+          <input class="form-control" type="text" name="username" placeholder="Display name" required id="display-name">
+        </div>
+        <div class="d-grid gap-2 mt-5">
+          <button style="width: 50%; margin: 0 auto;" class="btn btn-primary">Math</button>
+          <button style="width: 50%; margin: 0 auto;" class="btn btn-info">Algorithm</button>
+          <button style="width: 50%; margin: 0 auto;" class="btn btn-danger">Physics</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/topics.js"></script>
+</body>
+
+</html>

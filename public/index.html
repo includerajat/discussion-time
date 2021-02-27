@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Discussion Time</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+  <link rel="icon" href="/img/group-discussion-1534056-1300137.webp">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous" />
+  <!-- <link rel="stylesheet" href="/css/stylesa.min.css"> -->
+  <style>
+    * {
+      font-family: 'Abel', sans-serif;
+      color: white;
+    }
+
+    body {
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    #center {
+      background-color: slateblue;
+      max-width: 450px;
+      height: 80vh;
+      margin: 10vh auto;
+      border: 3px solid white;
+      box-shadow: 10px 10px 8px 10px #888888;
+      border-radius: 5px;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="center" class="container centered-form">
+    <i style="font-size: 32px; padding-right: 16px; cursor: pointer;" class="far fa-thumbs-up"></i>
+    <i style="font-size: 32px; cursor: pointer;" class="far fa-thumbs-down"></i>
+    <div class="centered-form__box">
+      <h1 style="text-align: center;">Discussion Time</h1>
+      <a class="btn btn-outline-info mb-2" href="/topics.html">Choose Hot Discussion Topics</a>
+      <form action="/chat.html">
+        <div class="mb-3">
+          <label class="form-label" for="display-name">Display name</label>
+          <input class="form-control" type="text" name="username" placeholder="Display name" required id="display-name">
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="publicRooms">Choose Public Discussion : </label>
+          <select class="form-select" name="room" id="publicRooms">
+            <option value="no">Select Public Discussion</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="room">Start New Discussion</label>
+          <input class="form-control" type="text" name="room" id="room" placeholder="Enter Discussion Name ..."
+            required>
+        </div>
+        <div class="form-check">
+          <input name="theme" checked class="form-check-input" type="checkbox" value="true">
+          <label class="mb-3 form-check-label">
+            Use Custom Theme For Discussion
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" id="public" checked name="roomType" value="public">
+          <label class="form-check-label" for="public">Public Discussion</label>
+        </div>
+        <div class="form-check mb-3">
+          <input class="form-check-input" type="radio" id="private" name="roomType" value="private">
+          <label class="form-check-label" for="private">Private Discussion</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Start Discussion</button>
+      </form>
+    </div>
+    <div class="mt-3" style="text-align: center;">*Delete message by double tap (only your side)</div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/index.js"></script>
+</body>
+
+</html>
